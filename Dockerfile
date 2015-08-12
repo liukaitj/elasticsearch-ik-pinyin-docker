@@ -2,15 +2,15 @@
 FROM java:8-jre
 MAINTAINER liukaitj <liukai.tci@gmail.com>
 
-RUN wget -q http://github.com/liukaitj/elasticsearch-cn-out-of-box/archive/v1.6.0P.zip && unzip -qq v1.6.0P.zip && \
-    mv /elasticsearch-cn-out-of-box-1.6.0P /elasticsearch && \
+RUN wget -q http://github.com/liukaitj/elasticsearch-cn-out-of-box/archive/v1.6.0P.docker.zip && unzip -qq v1.6.0P.docker.zip && \
+    mv /elasticsearch-cn-out-of-box-1.6.0P.docker /elasticsearch && \
     rm /elasticsearch/lib/sigar/*freebsd* && \
     rm /elasticsearch/lib/sigar/*solaris* && \
     rm /elasticsearch/lib/sigar/*winnt* && \
     rm /elasticsearch/bin/*.exe && \
     rm -rf /elasticsearch/bin/service && \
     rm -rf /elasticsearch/plugins/marvel && \
-    rm v1.6.0P.zip
+    rm v1.6.0P.docker.zip
 
 RUN mkdir /data /logs
 
