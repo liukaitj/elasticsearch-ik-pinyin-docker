@@ -6,7 +6,7 @@ java:8-jre
 
 ## 部署方法
 ### 获取镜像
-    docker pull liukaitj/elasticsearch-ik-pinyin-docker
+    docker pull liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
 
 ### 启动镜像
     docker run --name jenkins-es -p 9200:9200 -p 9300:9300 -v /home/docker/opt/elasticsearch/data:/data -v /home/docker/opt/elasticsearch/logs:/logs -e CLUSTER_NAME=elasticsearch --rm=false -d liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
