@@ -9,7 +9,7 @@ java:8-jre
     docker pull liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
 
 ### 启动镜像
-    docker run --name jenkins-es -p 9200:9200 -p 9300:9300 -v /home/docker/opt/elasticsearch/data:/data -v /home/docker/opt/elasticsearch/logs:/logs -e CLUSTER_NAME=elasticsearch --rm=false -d liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
+    docker run --name esdocker -p 9200:9200 -p 9300:9300 -v /path/to/data:/data -v /path/to/logs:/logs -e CLUSTER_NAME=elasticsearch --rm=false -d liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
 
 * -e 参数说明
 
