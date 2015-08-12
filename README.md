@@ -6,15 +6,17 @@ java:8-jre
 
 ## 部署方法
 ### 获取镜像
-> docker pull liukaitj/elasticsearch-ik-pinyin-docker
+    docker pull liukaitj/elasticsearch-ik-pinyin-docker
 
 ### 启动镜像
-> docker run --name jenkins-es -p 9200:9200 -p 9300:9300 -v /home/docker/opt/elasticsearch/data:/data -v /home/docker/opt/elasticsearch/logs:/logs -e CLUSTER_NAME=elasticsearch --rm=false -d liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
+    docker run --name jenkins-es -p 9200:9200 -p 9300:9300 -v /home/docker/opt/elasticsearch/data:/data -v /home/docker/opt/elasticsearch/logs:/logs -e CLUSTER_NAME=elasticsearch --rm=false -d liukaitj/elasticsearch-ik-pinyin-docker:1.6.0P
 
 * -e 参数说明
 
 传入docker container的环境变量对应着elasticsearch.yml中的配置信息，如：
-> CLUSTER_NAME  对应  cluster.name
-> NODE_NAME     对应  node.name
+
+    CLUSTER_NAME  对应  cluster.name
+    NODE_NAME     对应  node.name
+
 等等。详细可配置参数请参考 [docker-entrypoint.sh](https://github.com/liukaitj/elasticsearch-ik-pinyin-docker/blob/master/docker-entrypoint.sh) 中的环境变量信息。
 
