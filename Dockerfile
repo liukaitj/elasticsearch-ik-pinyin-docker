@@ -20,5 +20,8 @@ ENV ES_HOME /elasticsearch
 
 ADD docker-entrypoint.sh /elasticsearch/bin/docker-entrypoint.sh
 
+RUN chmod +x /elasticsearch/bin/docker-entrypoint.sh && \
+    chmod +x /elasticsearch/bin/elasticsearch
+
 EXPOSE 9200 9300
 CMD ["/elasticsearch/bin/docker-entrypoint.sh"]
